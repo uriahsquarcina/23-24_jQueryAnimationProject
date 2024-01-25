@@ -9,56 +9,49 @@
 
     <!-- jQuery Include -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <!--<style>
-        #redBox {
-            width: 100px;
-            height: 100px;
-            background-color: red;
+    <style>
+        #lupo {
+            display:none;
+            width:20%;
             position: absolute;
-            left: 0px;
-            top: 0px;
+
+        }
+        #air {
+            width:20%
+            position: absolute;
+
+        }
+        #casa {
+            width:20%
+            position: absolute;
+
         }
 
-        #greenBox {
-            width: 100px;
-            height: 100px;
-            background-color: green;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
 
-        #blueBox {
-            width: 100px;
-            height: 100px;
-            background-color: blue;
-            position: absolute;
-            left: 0px;
-            top: 0px;
-        }
-
-    </style> -->
+    </style>
 </head>
 <body>
 <div class="container">
-
-    <div class="row">
+<div class="row">
+    <div class="col">
         <div class="col-12">
-            <div> <img id="lupo" src="../img/lupo.png" style="width:50%"/></div>
+            <div> <img id="lupo" src="../img/lupo.png"></div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="col">
         <div class="col-12">
-            <div> <img id="air" src="../img/air.jpg" style="width:50%"/></div>
+            <div> <img id="air" src="../img/air.jpg"/></div>
         </div>
     </div>
 
-    <div class="row">
+    <div class="col">
         <div class="col-12">
-            <div> <img id="casa" src="../img/casaa.jfif" style="width:50%"/></div>
+            <div> <img id="casa" src="../img/casaa.jfif"/></div>
         </div>
     </div>
+</div>
+
 
 
     <!-- <div class="row">
@@ -103,16 +96,21 @@
 
     }); */ -->
 
+    /*$(document).ready(function(){
+        $("#casa").click(function(){
+            $("div").animate({
+                height: 'toggle'
+            });
+        });
+    });*/
+
     $(document).ready(function (){
-        $("#lupo").animate({
-            width: '300px',
-        });
+        $("#lupo").fadeIn();
         $("#air").animate({
-            width: '300px',
+            height: '200px',
+            left: '+=400'
         });
-        $("#casa").animate({
-            width: '300px',
-        });
+        $("#casa").fadeToggle(1000);
 
     });
 
